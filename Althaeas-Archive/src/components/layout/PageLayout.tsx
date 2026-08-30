@@ -16,9 +16,9 @@ export default function PageLayout({ children }: PageLayoutProps) {
         </div>
 
         {/* site title */}
-        <div className="px-6 py-3 border-b border-neutral-300">
-          <h1 className="text-red-900 font-serif italic text-lg">
-            [name]'s Archive
+        <div className="w-full max-w-4xl border border-neutral-400 shadow-sm bg-white font-body">
+          <h1 className="text-red-900 font-heading italic text-lg">
+            Althaea's Archive
           </h1>
         </div>
 

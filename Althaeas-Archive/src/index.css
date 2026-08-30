@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@theme {
+    --font-heading: Georgia, "Times New Roman", serif;
+    --font-timestamp: Monaco, Consolas, "Courier New", monospace;
+    --font-body: "Lucida Sans", "Lucida Sans Unicode", "Lucida Grande", Verdana, sans-serif;
+}

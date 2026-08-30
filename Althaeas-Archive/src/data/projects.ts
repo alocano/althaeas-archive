@@ -45,4 +45,19 @@ export const projects: Project[] = [
     hasVideo: false,
     hasDemo: true,
   },
+  {
+    id: "handitdown",
+    title: "HandItDown - College Material Exchange Platform",
+    repoUrl: "https://github.com/g35k/handitdown",
+    dateRange: "October 2025",
+    role: "Hackathon Win, Sustainability",
+    stack: ["Flask", "Supabase", "React", "Vite", "Tailwind", "TypeScript"],
+    description:
+        "HandItDown is a student-run material exchange platform that allows  fellow students to purchase and donate used textbooks, electronic kits,  and other course equipment, reducing waste and costs.  HandItDown was created in 48 hours for Hornet Hacks 3.0 and won the Sustainability category, additionally gaining community feedback from a survey with 70+ student responses.",
+    myContribution:
+        "Built frontend and frontend components using React, Vite, Tailwind, and TypeScript, focusing on UX decisions with students in mind.",
+    status: "complete",
+    hasVideo: false,
+    hasDemo: true,
+  },
 ];

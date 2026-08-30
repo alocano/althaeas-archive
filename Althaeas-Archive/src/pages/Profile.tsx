@@ -12,7 +12,7 @@ export default function Profile() {
         <div className="w-20 h-20 bg-red-900 rounded-sm shrink-0" />
 
         <div className="flex-1 flex items-center justify-between">
-          <p className="text-sm">Welcome! I'm [name]</p>
+          <p className="text-sm">Welcome, I'm Althaea!</p>
           <div className="flex gap-2">
             <a
               href={LINKEDIN_URL}
@@ -40,7 +40,12 @@ export default function Profile() {
       <div className="border border-neutral-300 rounded-sm p-3 mt-3 text-xs space-y-1">
         <p>
           <span className="text-neutral-500">My pseuds: </span>
-          <span className="underline">[name]</span>
+          <a href="https://github.com/alocano"
+             target="_blank"
+             rel="noopener noreferrer"
+             className="underline">
+            alocano
+          </a>
         </p>
         <p>
           <span className="text-neutral-500">I joined on: </span>
@@ -52,7 +57,7 @@ export default function Profile() {
         <h3 className="text-sm font-medium mb-2">Bio</h3>
         <div className="text-sm text-neutral-700 space-y-3">
           <p>
-            Hello, I am [name]. Welcome to my personal website (layout and
+            Hello, I am Althaea. Welcome to my personal website (layout and
             palette inspired by Archive of Our Own/AO3)!
           </p>
           <p>
