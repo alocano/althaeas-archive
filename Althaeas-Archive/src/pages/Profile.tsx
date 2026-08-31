@@ -8,10 +8,12 @@ export default function Profile() {
 
   return (
     <div>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center justify-between gap-4">
         <div className="w-20 h-20 bg-red-900 rounded-sm shrink-0" />
 
-        <div className="flex-1 flex items-center justify-between">
+        <div className="flex items-center gap-4">
+
+        <div className="flex flex-col gap-2">
           <p className="text-sm">Welcome, I'm Althaea!</p>
           <div className="flex gap-2">
             <a
@@ -32,20 +34,15 @@ export default function Profile() {
           </div>
         </div>
       </div>
+      </div>
 
       {/* divider under the avatar row */}
       <div className="border-t border-neutral-300 mt-3" />
 
-      {/* pseuds/date box spans the full width below, not indented to the avatar */}
       <div className="border border-neutral-300 rounded-sm p-3 mt-3 text-xs space-y-1">
         <p>
           <span className="text-neutral-500">My pseuds: </span>
-          <a href="https://github.com/alocano"
-             target="_blank"
-             rel="noopener noreferrer"
-             className="underline">
-            alocano
-          </a>
+          <span className="underline">[name]</span>
         </p>
         <p>
           <span className="text-neutral-500">I joined on: </span>
@@ -57,8 +54,9 @@ export default function Profile() {
         <h3 className="text-sm font-medium mb-2">Bio</h3>
         <div className="text-sm text-neutral-700 space-y-3">
           <p>
-            Hello, I am Althaea. Welcome to my personal website (layout and
-            palette inspired by Archive of Our Own/AO3)!
+            Hello, I am [name]. Welcome to my personal website (layout and
+ (layout and
+!
           </p>
           <p>
             I am a Computer Engineering grad from Sac State with interest in

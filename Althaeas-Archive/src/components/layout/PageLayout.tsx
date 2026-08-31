@@ -7,16 +7,17 @@ interface PageLayoutProps {
 
 export default function PageLayout({ children }: PageLayoutProps) {
   return (
-    <div className="min-h-screen bg-neutral-100 flex justify-center py-8 px-4">
-      <div className="w-full max-w-4xl border border-neutral-400 shadow-sm bg-white">
-        <div className="h-8 bg-neutral-400 flex items-center justify-end gap-1 px-2">
+    <div className="min-h-screen bg-neutral-100 flex justify-center py-10 px-6">
+      <div className="w-full max-w-4xl border border-neutral-400 shadow-sm bg-white font-body">
+
+        <div className="h-8 bg-neutral-400 flex items-center justify-end gap-1 px-3">
           <div className="w-3 h-3 bg-neutral-200 rounded-sm" />
           <div className="w-3 h-3 bg-neutral-200 rounded-sm" />
           <div className="w-3 h-3 bg-neutral-200 rounded-sm" />
         </div>
 
         {/* site title */}
-        <div className="w-full max-w-4xl border border-neutral-400 shadow-sm bg-white font-body">
+        <div className="px-8 py-3 border-b border-neutral-300">
           <h1 className="text-red-900 font-heading italic text-lg">
             Althaea's Archive
           </h1>
