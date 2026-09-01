@@ -31,19 +31,19 @@ export default function Projects() {
                         <div className="flex flex-wrap gap-x-1 gap-y-1 mt-2 text-xs">
                             {project.stack.map((tech: string, i: number) => (
                                 <span key={tech} className="text-neutral-600">
-                  <span className="underline decoration-neutral-400">{tech}</span>
+                                    <span className="underline decoration-neutral-400">{tech}</span>
                                     {i < project.stack.length - 1 && ","}
-                </span>
+                                </span>
                             ))}
                             {project.hasVideo && (
                                 <span className="underline decoration-red-900 text-red-900">
-                  Video Available
-                </span>
+                                    Video Available
+                                </span>
                             )}
                             {project.hasDemo && (
                                 <span className="underline decoration-red-900 text-red-900">
-                  Demo Available
-                </span>
+                                    Demo Available
+                                </span>
                             )}
                         </div>
 

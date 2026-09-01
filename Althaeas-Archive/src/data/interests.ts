@@ -35,12 +35,27 @@ export const interests: InterestGroup[] = [
   {
     id: "hardware-embedded",
     category: "Hardware & Embedded",
-    items: ["STM32", "Raspberry Pi", "ESP32", "Arduino", "GPIO", "I2C", "sensor systems"],
+    items: [
+      "STM32",
+      "Raspberry Pi",
+      "ESP32",
+      "Arduino",
+      "GPIO",
+      "I2C",
+      "sensor systems",
+    ],
   },
   {
     id: "hardware-dev-tools",
     category: "Hardware Dev Languages & Tools",
-    items: ["Verilog", "SystemVerilog", "VHDL", "LogiSim", "Multisim", "Xilinx Vivado"],
+    items: [
+      "Verilog",
+      "SystemVerilog",
+      "VHDL",
+      "LogiSim",
+      "Multisim",
+      "Xilinx Vivado",
+    ],
   },
   {
     id: "non-technical",

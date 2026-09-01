@@ -10,7 +10,8 @@ export const projects: Project[] = [
     stack: ["React", "TypeScript", "Tailwind", "Vite"],
     description:
       "A personal website to highlight projects, achievements, and skills as well as improve web development skills, specifically React, TS, and Tailwind.",
-    myContribution: "Solo project. Designed, built, and deployed independently.",
+    myContribution:
+      "Solo project. Designed, built, and deployed independently.",
     status: "in-progress",
     hasVideo: false,
     hasDemo: true,
@@ -36,7 +37,15 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/g35k/senso",
     dateRange: "March 2026",
     role: "Hackathon Win, Open Innovation",
-    stack: ["Raspberry Pi 3 Model B", "Python", "GPIO", "Flask", "HTML", "CSS", "JavaScript"],
+    stack: [
+      "Raspberry Pi 3 Model B",
+      "Python",
+      "GPIO",
+      "Flask",
+      "HTML",
+      "CSS",
+      "JavaScript",
+    ],
     description:
       "A hardware device that teaches Braille to pre-adolescent children through tactile feedback and an external speaker for audio cues.",
     myContribution:
@@ -53,9 +62,9 @@ export const projects: Project[] = [
     role: "Hackathon Win, Sustainability",
     stack: ["Flask", "Supabase", "React", "Vite", "Tailwind", "TypeScript"],
     description:
-        "HandItDown is a student-run material exchange platform that allows  fellow students to purchase and donate used textbooks, electronic kits,  and other course equipment, reducing waste and costs. HandItDown was created in 48 hours for Hornet Hacks 3.0 and won the Sustainability category, additionally gaining community feedback from a survey with 70+ student responses.",
+      "HandItDown is a student-run material exchange platform that allows  fellow students to purchase and donate used textbooks, electronic kits,  and other course equipment, reducing waste and costs. HandItDown was created in 48 hours for Hornet Hacks 3.0 and won the Sustainability category, additionally gaining community feedback from a survey with 70+ student responses.",
     myContribution:
-        "Built frontend and frontend components using React, Vite, Tailwind, and TypeScript, focusing on UX decisions with students in mind.",
+      "Built frontend and frontend components using React, Vite, Tailwind, and TypeScript, focusing on UX decisions with students in mind.",
     status: "complete",
     hasVideo: false,
     hasDemo: true,

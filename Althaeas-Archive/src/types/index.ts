@@ -34,5 +34,5 @@ export type InterestCategory =
 export interface InterestGroup {
   id: string;
   category: InterestCategory;
-  items: string[]; // rendered as comma separated, or map individually if you want tags
+  items: string[]; // rendered as comma separated
 }

@@ -17,7 +17,7 @@ export default function SymbolKey() {
         aria-label="Show symbol key"
       >
         ?
-        
+
         {!isOpen && (
           <span className="pointer-events-none absolute bottom-full mb-1 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-neutral-800 text-white text-xs px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity">
             Symbol key

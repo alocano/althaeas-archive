@@ -1,24 +1,25 @@
 import { NavLink } from "react-router-dom";
 
-//Replicate Ao3's sidebar: separate Dashboard and Profile on top
-const topNavItems = [
-  { to: "/dashboard", label: "Dashboard" },
-  { to: "/profile", label: "Profile" },
+// Dashboard stands alone at the top, like AO3's own dashboard link
+const topNavItems = [{ to: "/dashboard", label: "Dashboard" },
+{ to: "/profile", label: "Profile" },
 ];
 
-// everything else below divider
+// core archive pages
 const mainNavItems = [
   { to: "/projects", label: "Projects" },
+  { to: "/bookmarks", label: "Bookmarks" },
   { to: "/interests", label: "Interests" },
-  { to: "/bookmarks", label: "Bookmarks" }
 ];
 
+// separate group for the misc/highlights/stats window
+{/*const extraNavItems = [{ to: "/Misc", label: "Miscellaneous" }];*/ }
+
 function navLinkClass({ isActive }: { isActive: boolean }) {
-  return `px-4 py-3 text-sm ${
-    isActive
+  return `px-4 py-3 text-sm text-right ${isActive
       ? "bg-neutral-200 font-medium"
       : "hover:bg-neutral-100 text-neutral-700"
-  }`;
+    }`;
 }
 
 export default function Sidebar() {
@@ -39,6 +40,15 @@ export default function Sidebar() {
             {item.label}
           </NavLink>
         ))}
+
+        {/* divider before the highlights/stats group 
+        <div className="border-t border-neutral-300 my-2" />
+
+        {extraNavItems.map((item) => (
+          <NavLink key={item.to} to={item.to} className={navLinkClass}>
+            {item.label}
+          </NavLink>
+        ))}*/}
       </nav>
     </aside>
   );
