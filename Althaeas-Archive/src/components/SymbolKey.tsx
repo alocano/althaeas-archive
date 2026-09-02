@@ -1,43 +1,101 @@
 import { useState } from "react";
-const SYMBOL_LEGEND = [
-  { symbol: "p", meaning: "In progress" },
-  { symbol: "c", meaning: "Complete" },
-  { symbol: "o", meaning: "On hold" },
-];
+import type { SymbolGrid } from "../types";
+import { symbolLegend } from "../data/symbolLegend";
 
-export default function SymbolKey() {
+interface SymbolGridDisplayProps {
+  grid: SymbolGrid;
+  size?: number; // pixel size of symbols quadrant, defaults to 16
+}
+
+function Quadrant({ src, size }: { src: string; size: number }) {
+  return (
+    <div
+      className="border border-neutral-300 bg-white overflow-hidden"
+      style={{ width: size, height: size }}
+    >
+      <img src={src} alt="" className="w-full h-full object-cover" />
+    </div>
+  );
+}
+
+export default function SymbolGridDisplay({
+  grid,
+  size = 24,
+}: SymbolGridDisplayProps) {
   const [isOpen, setIsOpen] = useState(false);
 
+  // top-left = software, top-right = hardware, bottom-left = demo,
+  // bottom-right = complete/incomplete (always one or the other, never blank)
+  const topLeft = grid.isSoftware ? "/symbols/Software.svg" : "/symbols/off.svg";
+  const topRight = grid.isHardware ? "/symbols/Hardware.svg" : "/symbols/off.svg";
+  const bottomLeft = grid.hasDemo ? "/symbols/Demo.svg" : "/symbols/off.svg";
+  const bottomRight = grid.isComplete
+    ? "/symbols/Complete.svg"
+    : "/symbols/Incomplete.svg";
+
   return (
-    <div className="relative inline-block">
+    <>
       <button
         type="button"
-        onClick={() => setIsOpen((prev) => !prev)}
-        className="group relative w-5 h-5 rounded-full border border-neutral-400 text-xs flex items-center justify-center hover:bg-neutral-200"
+        onClick={() => setIsOpen(true)}
+        className="inline-grid grid-cols-2 gap-0.5"
+        style={{ cursor: "help" }}
         aria-label="Show symbol key"
       >
-        ?
-
-        {!isOpen && (
-          <span className="pointer-events-none absolute bottom-full mb-1 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-neutral-800 text-white text-xs px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity">
-            Symbol key
-          </span>
-        )}
+        <Quadrant src={topLeft} size={size} />
+        <Quadrant src={topRight} size={size} />
+        <Quadrant src={bottomLeft} size={size} />
+        <Quadrant src={bottomRight} size={size} />
       </button>
 
       {isOpen && (
-        <div className="absolute z-10 top-full mt-2 right-0 w-56 border border-neutral-300 bg-white shadow-md rounded-sm p-3">
-          <p className="text-xs font-medium mb-2">Symbol key</p>
-          <ul className="space-y-1">
-            {SYMBOL_LEGEND.map((entry) => (
-              <li key={entry.symbol} className="flex items-center gap-2 text-xs">
-                <span className="w-4">{entry.symbol}</span>
-                <span className="text-neutral-600">{entry.meaning}</span>
-              </li>
-            ))}
-          </ul>
+        <div
+          className="fixed inset-0 bg-black/40 flex items-center justify-center z-50"
+          onClick={() => setIsOpen(false)}
+        >
+          <div
+            className="bg-white rounded-sm shadow-lg max-w-md w-full mx-4 max-h-[80vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="px-4 py-3 border-b border-neutral-300">
+              <h3 className="font-heading font-semibold text-base">
+                Symbols we use on the Archive
+              </h3>
+            </div>
+
+            <div className="p-4 space-y-3">
+              {symbolLegend.map((entry) => (
+                <div key={entry.label} className="flex items-center gap-3">
+                  <div className="w-8 h-8 border border-neutral-300 shrink-0 overflow-hidden">
+                    <img
+                      src={entry.image}
+                      alt=""
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium">{entry.label}</p>
+                    <p className="text-xs text-neutral-600">
+                      {entry.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="px-4 py-3 border-t border-neutral-300 flex justify-between items-center">
+              <span className="text-sm font-medium">Symbols key</span>
+              <button
+                type="button"
+                onClick={() => setIsOpen(false)}
+                className="text-xs border border-neutral-400 rounded-sm px-3 py-1 hover:bg-neutral-100"
+              >
+                Close
+              </button>
+            </div>
+          </div>
         </div>
       )}
-    </div>
+    </>
   );
 }

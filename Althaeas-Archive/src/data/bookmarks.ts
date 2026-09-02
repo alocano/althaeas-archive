@@ -4,6 +4,7 @@ export const bookmarks: Bookmark[] = [
   {
     id: "neetcode",
     title: "Neetcode Practice",
+    url: "https://neetcode.io/user/QuasarTrill524",
     category: "Python, DSA",
     description:
       "Currently improving my Python skills and trying to solidify DSA concepts with a Neetcode roadmap.",
@@ -13,6 +14,7 @@ export const bookmarks: Bookmark[] = [
     id: "hail-mary",
     title: "Project Hail Mary",
     category: "Non-Technical, Books I'm Currently Reading, Science Fiction",
+    url:"https://app.thestorygraph.com/profile/aaaster_",
     description:
       "A personal, non-technical goal I am working on is reading more. My current read is Project Hail Mary by Andy Weir.",
     status: "in-progress",
@@ -20,6 +22,7 @@ export const bookmarks: Bookmark[] = [
   {
     id: "star-blanket",
     title: "Star Blanket",
+    url: "https://bettymcknit.com/patterns/6daystarblanket/",
     category: "Non-Technical, Crochet",
     description:
       'Currently working on a crocheted 8-point blanket following Betty McKnit\'s "6-Day Star Blanket" pattern.',

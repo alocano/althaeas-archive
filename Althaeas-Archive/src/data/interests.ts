@@ -3,7 +3,8 @@ import type { InterestGroup } from "../types";
 export const interests: InterestGroup[] = [
   {
     id: "coursework",
-    category: "Coursework",
+    name: "Coursework",
+    category: ["Coursework"],
     items: [
       "Embedded Systems Design",
       "CMOS & Digital VLSI Design",
@@ -19,22 +20,26 @@ export const interests: InterestGroup[] = [
   },
   {
     id: "prog-languages",
-    category: "Programming Languages",
+    name: "Programming Languages",
+    category: ["Programming Languages", "Software"],
     items: ["C", "Java", "MATLAB", "Python", "x86 Assembly"],
   },
   {
     id: "web-dev",
-    category: "Web Development",
+    name: "Web Development",
+    category: ["Programming Languages", "Software"],
     items: ["HTML", "CSS", "JavaScript", "React", "Flask", "MERN"],
   },
   {
     id: "dev-tools",
-    category: "Development Tools",
+    name: "Development Tools",
+    category: ["Software", "Tools"],
     items: ["Git/GitHub", "VS Code", "Bash", "Ubuntu/Linux", "Figma", "Jira"],
   },
   {
     id: "hardware-embedded",
-    category: "Hardware & Embedded",
+    name: "Hardware & Embedded",
+    category: ["Hardware"],
     items: [
       "STM32",
       "Raspberry Pi",
@@ -47,7 +52,8 @@ export const interests: InterestGroup[] = [
   },
   {
     id: "hardware-dev-tools",
-    category: "Hardware Dev Languages & Tools",
+    name: "Hardware Tools",
+    category: ["Hardware", "Tools"],
     items: [
       "Verilog",
       "SystemVerilog",
@@ -59,7 +65,8 @@ export const interests: InterestGroup[] = [
   },
   {
     id: "non-technical",
-    category: "Non-Technical Interests",
+    name: "Non-Technical Interests",
+    category: ["Non-Technical Interests"],
     items: ["Crochet", "Music", "Roguelike Games", "Crosswords"],
   },
 ];

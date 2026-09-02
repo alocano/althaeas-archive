@@ -4,17 +4,22 @@ export const projects: Project[] = [
   {
     id: "ao3-site",
     title: "AO3-Themed Personal Website",
-    repoUrl: "https://github.com/alocano/",
+    repoUrl: "https://github.com/alocano/althaeas-archive",
     dateRange: "Aug 2026 - Present",
     role: "Personal Project",
     stack: ["React", "TypeScript", "Tailwind", "Vite"],
     description:
       "A personal website to highlight projects, achievements, and skills as well as improve web development skills, specifically React, TS, and Tailwind.",
-    myContribution:
-      "Solo project. Designed, built, and deployed independently.",
+    myContribution: "Solo project. Designed, built, and deployed independently. Most of the layout and assets including the symbols and the favicon were made in Figma!",
     status: "in-progress",
     hasVideo: false,
     hasDemo: true,
+    symbolGrid: {
+      isSoftware: true,
+      isHardware: false,
+      hasDemo: true,
+      isComplete: false,
+    },
   },
   {
     id: "pawd",
@@ -26,10 +31,16 @@ export const projects: Project[] = [
     description:
       "An IRB-compliant glove designed to improve clinical workflow by providing real-time feedback during the Unified Parkinson's Disease Rating Scale (UPDRS) assessment, focusing on motor symptoms: finger tapping and pronation-supination. The accompanying web application provides time stamps of the assessment and graphs the data for further analysis.",
     myContribution:
-      "Led firmware development for sensor integration and built the Flask backend for data logging and full-stack HTML, CSS, JS, and Flask application for real-time visualizations.",
+      "Led firmware development for sensor integration and built the Flask backend for data logging.",
     status: "complete",
     hasVideo: true,
     hasDemo: false,
+    symbolGrid: {
+      isSoftware: true,
+      isHardware: true,
+      hasDemo: true,
+      isComplete: true,
+    },
   },
   {
     id: "senso",
@@ -37,22 +48,20 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/g35k/senso",
     dateRange: "March 2026",
     role: "Hackathon Win, Open Innovation",
-    stack: [
-      "Raspberry Pi 3 Model B",
-      "Python",
-      "GPIO",
-      "Flask",
-      "HTML",
-      "CSS",
-      "JavaScript",
-    ],
+    stack: ["Raspberry Pi 3 Model B", "Python", "GPIO", "Flask", "HTML", "CSS", "JavaScript"],
     description:
       "A hardware device that teaches Braille to pre-adolescent children through tactile feedback and an external speaker for audio cues.",
     myContribution:
-      "Built the GPIO button logic and assisted with Python development for lesson navigation and text-to-speech feedback.",
+      "Built the GPIO button logic and the Flask app that coordinated hardware state with the frontend.",
     status: "complete",
     hasVideo: false,
     hasDemo: true,
+    symbolGrid: {
+      isSoftware: true,
+      isHardware: true,
+      hasDemo: true,
+      isComplete: true,
+    },
   },
   {
     id: "handitdown",
@@ -68,5 +77,11 @@ export const projects: Project[] = [
     status: "complete",
     hasVideo: false,
     hasDemo: true,
+    symbolGrid: {
+      isSoftware: true,
+      isHardware: false,
+      hasDemo: true,
+      isComplete: true,
+    },
   },
 ];

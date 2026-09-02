@@ -8,7 +8,12 @@ export default function Bookmarks() {
       <div className="space-y-4 ">
         {bookmarks.map((bookmark) => (
           <Card key={bookmark.id}>
-            <a href="#" className="text-red-900 font-medium underline">
+          <a
+              href={bookmark.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-red-900 font-medium underline"
+            >
               {bookmark.title}
             </a>
             <p className="text-xs text-neutral-500 mt-1">{bookmark.category}</p>
