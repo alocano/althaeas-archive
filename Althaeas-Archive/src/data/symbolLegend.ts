@@ -32,6 +32,6 @@ export const symbolLegend: SymbolLegendEntry[] = [
   {
     image:"",
     label: "",
-    description: "This work's status is unknown/has not been updated recently."
+    description: "This work's status is unknown/has not been updated recently or does not apply (e.g. no hardware)."
   }
 ];

@@ -17,7 +17,7 @@ export default function Dashboard() {
         <img
           src={avatarImg}
           alt="Profile avatar"
-          className="w-30 h-30 rounded-sm shrink-0 object-cover"
+          className="w-25 h-25 rounded-sm shrink-0 object-cover"
         />
 
         <div className="flex items-center gap-4">

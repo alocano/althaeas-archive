@@ -17,7 +17,7 @@ export default function Projects() {
                   href={project.repoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-red-900 font-medium underline"
+                  className="text-red-900 font-heading underline"
                 >
                   {project.title}
                 </a>
