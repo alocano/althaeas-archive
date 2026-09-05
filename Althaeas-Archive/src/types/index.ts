@@ -26,7 +26,9 @@ export interface Project {
   myContribution: string;
   status: Status;
   hasVideo: boolean;
+  videoUrl?: string;
   hasDemo: boolean;
+  demoUrl?: string;
   symbolGrid: SymbolGrid;
 }
 

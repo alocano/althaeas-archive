@@ -17,7 +17,7 @@ export default function Projects() {
                   href={project.repoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-red-900 font-heading underline"
+                  className="text-red-900 font-medium underline"
                 >
                   {project.title}
                 </a>
@@ -36,14 +36,36 @@ export default function Projects() {
                 </span>
               ))}
               {project.hasVideo && (
-                <span className="underline decoration-red-900 text-red-900">
-                  Video Available
-                </span>
+                project.videoUrl ? (
+                  <a
+                    href={project.videoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-red-900 text-red-900"
+                  >
+                    Video Available
+                  </a>
+                ) : (
+                  <span className="underline decoration-red-900 text-red-900">
+                    Video Available
+                  </span>
+                )
               )}
               {project.hasDemo && (
-                <span className="underline decoration-red-900 text-red-900">
-                  Demo Available
-                </span>
+                project.demoUrl ? (
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-red-900 text-red-900"
+                  >
+                    Demo Available
+                  </a>
+                ) : (
+                  <span className="underline decoration-red-900 text-red-900">
+                    Demo Available
+                  </span>
+                )
               )}
             </div>
 

@@ -27,18 +27,20 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/alocano/pawd",
     dateRange: "Aug 2025 - May 2026",
     role: "Senior Design",
-    stack: ["TFT Display", "IMU", "FSR", "ESP32", "Flask", "HTML", "CSS", "JS"],
+    stack: ["TFT Display", "IMU", "FSR", "ESP32", "Flask", "HTML", "CSS", "JavaScript"],
     description:
       "An IRB-compliant glove designed to improve clinical workflow by providing real-time feedback during the Unified Parkinson's Disease Rating Scale (UPDRS) assessment, focusing on motor symptoms: finger tapping and pronation-supination. The accompanying web application provides time stamps of the assessment and graphs the data for further analysis.",
     myContribution:
       "Led firmware development for sensor integration and built the Flask backend for data logging.",
     status: "complete",
     hasVideo: true,
-    hasDemo: false,
+    videoUrl: "https://www.youtube.com/watch?v=zm-nQzR8mFA&feature=youtu.be",
+    hasDemo: true,
+    demoUrl:"https://mysacstate-my.sharepoint.com/personal/jmansyur_csus_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fjmansyur_csus_edu%2FDocuments%2FAttachments%2F20260424%20121612.mp4&ct=1778708821615&or=OWA-NT-Mail&cid=258dc759-340e-66d2-8c60-165651666024&ga=1&referrer=StreamWebApp.Web&referrerScenario=AddressBarCopied.view.483a3971-ca41-417d-8cac-852c3acd21e9&isDarkMode=true",
     symbolGrid: {
       isSoftware: true,
       isHardware: true,
-      hasDemo: true,
+      hasDemo: false,
       isComplete: true,
     },
   },
@@ -55,7 +57,7 @@ export const projects: Project[] = [
       "Built the GPIO button logic and the Flask app that coordinated hardware state with the frontend.",
     status: "complete",
     hasVideo: false,
-    hasDemo: true,
+    hasDemo: false,
     symbolGrid: {
       isSoftware: true,
       isHardware: true,
@@ -77,6 +79,7 @@ export const projects: Project[] = [
     status: "complete",
     hasVideo: false,
     hasDemo: true,
+    demoUrl: "https://handitdown.netlify.app",
     symbolGrid: {
       isSoftware: true,
       isHardware: false,
