@@ -8,12 +8,11 @@ const topNavItems = [{ to: "/dashboard", label: "Dashboard" },
 // core archive pages
 const mainNavItems = [
   { to: "/projects", label: "Projects" },
+  { to: "/skills", label: "Skills"},
   { to: "/bookmarks", label: "Bookmarks" },
   { to: "/interests", label: "Interests" },
 ];
 
-// separate group for the misc/highlights/stats window
-{/*const extraNavItems = [{ to: "/Misc", label: "Miscellaneous" }];*/ }
 
 function navLinkClass({ isActive }: { isActive: boolean }) {
   return `px-4 py-3 text-sm text-right ${isActive
@@ -40,15 +39,6 @@ export default function Sidebar() {
             {item.label}
           </NavLink>
         ))}
-
-        {/* divider before the highlights/stats group 
-        <div className="border-t border-neutral-300 my-2" />
-
-        {extraNavItems.map((item) => (
-          <NavLink key={item.to} to={item.to} className={navLinkClass}>
-            {item.label}
-          </NavLink>
-        ))}*/}
       </nav>
     </aside>
   );

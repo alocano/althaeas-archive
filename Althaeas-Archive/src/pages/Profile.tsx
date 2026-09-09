@@ -59,6 +59,11 @@ export default function Profile() {
         <h3 className="text-med font-heading mb-2">Bio</h3>
         <div className="text-sm text-neutral-700 space-y-3">
           <p>
+            <strong>Currently...</strong><br></br>
+
+            Working on this personal site and scrolling through Pinterest for inspiration.
+          </p>
+          <p>            
             Hello, I am Althaea! Welcome to my personal website (layout and
             palette inspired by{" "}
             <a
@@ -78,7 +83,7 @@ export default function Profile() {
             I spent my last year of undergrad working on an assistive wearable for patients with Parkinson's disease, and earned a hackathon win in the Open Innovation category for a Braille-learning tool for pre-adolescent children. Through these and other group projects, I've built skills in software engineering principles and Scrum methodology alongside embedded systems work.
           </p>
           <p>
-            In my free time, I crochet (currently working on a blanket), play music (guitar, ukulele, bass, and formerly violin and viola), read, and play games like "Minecraft" and "Dead Cells". I'm also a big PWHL fan and excited for San Jose's new team this upcoming season!
+            In my free time, I crochet (currently working on a blanket), play music (guitar, ukulele, bass, and formerly violin and viola), read, and play games like "Minecraft" and "Dead Cells". I love fall and Halloween is one of my favorite holidays! I'm also a new PWHL fan and excited for San Jose's new team this upcoming season as well as the upcoming NBA season!
           </p>
         </div>
       </div>

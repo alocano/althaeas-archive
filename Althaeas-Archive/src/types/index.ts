@@ -43,12 +43,11 @@ export interface Bookmark {
 }
 
 export type InterestCategory =
-  | "Coursework"
-  | "Programming Languages"
-  | "Software"
-  | "Hardware"
-  | "Tools"
-  | "Non-Technical Interests"
+  | "Art"
+  | "Book"
+  | "TV/Movie"
+  | "Music"
+  | "Game"
 ;
 
 export interface InterestGroup {
@@ -56,4 +55,19 @@ export interface InterestGroup {
   id: string;
   category: InterestCategory[];
   items: string[]; // rendered as comma separated
+  description: string;
+}
+
+export type SkillCategory =
+  | "Coursework"
+  | "Programming Languages"
+  | "Software"
+  | "Hardware"
+  | "Tools"
+;
+export interface SkillGroup {
+  name: string;
+  id: string;
+  category: SkillCategory[];
+  items: string[];
 }

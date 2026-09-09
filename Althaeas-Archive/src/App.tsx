@@ -5,7 +5,7 @@ import Dashboard from "./pages/Dashboard";
 import Projects from "./pages/Projects";
 import Bookmarks from "./pages/Bookmarks";
 import Interests from "./pages/Interests";
-//import Misc from "./pages/Misc";
+import Skills from "./pages/Skills";
 
 function App() {
   return (
@@ -17,9 +17,9 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/skills" element={<Skills />} />
           <Route path="/bookmarks" element={<Bookmarks />} />
           <Route path="/interests" element={<Interests />} />
-          {/*<Route path="/misc" element={<Misc />} />*/}
         </Routes>
       </PageLayout>
     </BrowserRouter>

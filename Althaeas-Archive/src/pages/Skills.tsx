@@ -1,23 +1,23 @@
 import { useState } from "react";
-import { interests } from "../data/interests";
+import { skills } from "../data/skills";
 import Card from "../components/Card";
 import FilterDropdown from "../components/FilterDropdown";
-import type { InterestCategory } from "../types";
+import type { SkillCategory } from "../types";
 
 // flatten every category used across all groups into a deduped list,
 // used to populate the filter dropdown options
-const allCategories: InterestCategory[] = Array.from(
-  new Set(interests.flatMap((group) => group.category))
+const allCategories: SkillCategory[] = Array.from(
+  new Set(skills.flatMap((group) => group.category))
 );
 
-export default function Interests() {
+export default function Skills() {
   const [selectedCategory, setSelectedCategory] = useState("All Media Types");
 
   const visibleGroups =
     selectedCategory === "All Media Types"
-      ? interests
-      : interests.filter((group) =>
-          group.category.includes(selectedCategory as InterestCategory)
+      ? skills
+      : skills.filter((group) =>
+          group.category.includes(selectedCategory as SkillCategory)
         );
 
   return (
@@ -25,7 +25,7 @@ export default function Interests() {
       {/* box holding title + filter, matching AO3's filter box */}
       <div className="bg-neutral-100 border border-neutral-300 rounded-sm p-4 mb-4">
         <h2 className="text-lg font-medium font-heading mb-3">
-          alocano's Interests + Skills
+          alocano's Skills
         </h2>
         <div className="flex gap-2">
           <FilterDropdown
@@ -48,8 +48,7 @@ export default function Interests() {
             <p className="text-red-900 font-medium underline">
               {group.name}:
             </p>
-            <p className="text-xs text-neutral-500 mt-1">{group.items.join(", ")}</p>
-            <p className="text-sm text-neutral-700 mt-2">{group.description}</p>
+            <p className="text-sm text-neutral-700">{group.items.join(", ")}</p>
           </Card>
         ))}
       </div>
