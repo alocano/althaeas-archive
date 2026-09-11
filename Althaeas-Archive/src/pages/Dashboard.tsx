@@ -1,5 +1,6 @@
 import { projects } from "../data/projects";
 import { interests } from "../data/interests";
+import { skills } from "../data/skills";
 import SectionBox from "../components/SectionBox";
 import { useState } from "react";
 import avatarImg from "../assets/me.jpg";
@@ -50,18 +51,26 @@ export default function Dashboard() {
       <div className="space-y-6">
         <SectionBox title="Interests + Skills">
           <div className="space-y-3">
-            {interests.slice(0, 2).map((group) => (
-              <div
-                key={group.id}
-                className="border border-neutral-300 rounded-sm bg-white p-3 shadow-sm"
-              >
-                <p className="text-sm font-semibold font-heading">{group.category}:</p>
-                <p className="text-sm text-neutral-700">{group.items.join(", ")}</p>
-              </div>
-            ))}
+            {skills
+              .filter((group) =>
+                ["prog-languages", "hardware-embedded"].includes(group.id)
+              )
+              .map((group) => (
+                <div key={group.id} className="border border-neutral-300 rounded-sm bg-white p-3">
+                  <p className="text-sm font-semibold font-heading">{group.name}:</p>
+                  <p className="text-sm text-neutral-700">{group.items.join(", ")}</p>
+                </div>
+              ))}
+            {interests
+              .filter((group) => ["crochet", "music"].includes(group.id))
+              .map((group) => (
+                <div key={group.id} className="border border-neutral-300 rounded-sm bg-white p-3">
+                  <p className="text-sm font-semibold font-heading">{group.name}:</p>
+                  <p className="text-sm text-neutral-700">{group.items.join(", ")}</p>
+                </div>
+              ))}
           </div>
         </SectionBox>
-
         <SectionBox title="Recent Updates">
           <div className="space-y-3">
             {recentProjects.map((project) => (
