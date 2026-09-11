@@ -40,7 +40,7 @@ export const projects: Project[] = [
     symbolGrid: {
       isSoftware: true,
       isHardware: true,
-      hasDemo: false,
+      hasDemo: true,
       isComplete: true,
     },
   },
