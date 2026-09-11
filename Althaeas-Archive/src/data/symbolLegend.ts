@@ -1,31 +1,32 @@
 import type { SymbolLegendEntry } from "../types";
 
+const base = import.meta.env.BASE_URL;
 // grid layout: top-left = Software, top-right = Hardware,
 // bottom-left = Demo Available, bottom-right = Complete/Incomplete.
 // icons in public/symbols
 export const symbolLegend: SymbolLegendEntry[] = [
   {
-    image: "/symbols/Software.svg",
+    image: `${base}symbols/Software.svg`,
     label: "Software",
     description: "This project has a software component!",
   },
   {
-    image: "/symbols/Hardware.svg",
+    image: `${base}symbols/Hardware.svg`,
     label: "Hardware",
     description: "This project has a hardware component!",
   },
   {
-    image: "/symbols/Demo.svg",
+    image: `${base}symbols/Demo.svg`,
     label: "Demo Available",
     description: "A video/live demo and/or GitHub repository is available (Check tags for link/s).",
   },
   {
-    image: "/symbols/Complete.svg",
+    image: `${base}symbols/Complete.svg`,
     label: "Complete",
-    description: "This project is finished!",
+    description: "This project is finished.",
   },
   {
-    image: "/symbols/Incomplete.svg",
+    image: `${base}symbols/Incomplete.svg`,
     label: "Incomplete",
     description: "This project is still in progress/unfulfilled.",
   },

@@ -26,12 +26,13 @@ export default function SymbolGridDisplay({
 
   // top-left = software, top-right = hardware, bottom-left = demo,
   // bottom-right = complete/incomplete (always one or the other, never blank)
-  const topLeft = grid.isSoftware ? "/symbols/Software.svg" : "/symbols/off.svg";
-  const topRight = grid.isHardware ? "/symbols/Hardware.svg" : "/symbols/off.svg";
-  const bottomLeft = grid.hasDemo ? "/symbols/Demo.svg" : "/symbols/off.svg";
-  const bottomRight = grid.isComplete
-    ? "/symbols/Complete.svg"
-    : "/symbols/Incomplete.svg";
+  const base = import.meta.env.BASE_URL;
+const topLeft = grid.isSoftware ? `${base}symbols/Software.svg` : `${base}symbols/off.svg`;
+const topRight = grid.isHardware ? `${base}symbols/Hardware.svg` : `${base}symbols/off.svg`;
+const bottomLeft = grid.hasDemo ? `${base}symbols/Demo.svg` : `${base}symbols/off.svg`;
+const bottomRight = grid.isComplete
+  ? `${base}symbols/Complete.svg`
+  : `${base}symbols/Incomplete.svg`;
 
   return (
     <>
