@@ -9,7 +9,7 @@ import Skills from "./pages/Skills";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <PageLayout>
         <Routes>
           {/* default route lands on Profile, not Dashboard */}
